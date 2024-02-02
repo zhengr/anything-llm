@@ -19,6 +19,8 @@ const { utilEndpoints } = require("./endpoints/utils");
 const { developerEndpoints } = require("./endpoints/api");
 const { extensionEndpoints } = require("./endpoints/extensions");
 const { bootHTTP, bootSSL } = require("./utils/boot");
+const { renderIFrameResponse } = require("./utils/embed/render");
+const { validEmbedConfigUUID } = require("./utils/middleware/embedMiddleware");
 const app = express();
 const apiRouter = express.Router();
 const FILE_LIMIT = "3GB";
@@ -89,6 +91,10 @@ if (process.env.NODE_ENV !== "development") {
     response.send("User-agent: *\nDisallow: /").end();
   });
 }
+
+// Named embedded to not collide with public folder /embed/ directory
+// when in production
+app.get("/embedded/:embedId", [validEmbedConfigUUID], renderIFrameResponse);
 
 app.all("*", function (_, response) {
   response.sendStatus(404);

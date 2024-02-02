@@ -17,6 +17,7 @@ const DEFAULT_SETTINGS = {
 
   // behaviors
   openOnLoad: "off", // or "on"
+  iframe: null, // 'enabled' is the only valid option
 };
 
 export default function useGetScriptAttributes() {

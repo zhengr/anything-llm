@@ -1,4 +1,4 @@
-import ChatWindowHeader from "./Header";
+import ChatWindowHeader, { ChatFullWindowHeader } from "./Header";
 import SessionId from "../SessionId";
 import useChatHistory from "@/hooks/chat/useChatHistory";
 import ChatContainer from "./ChatContainer";
@@ -29,6 +29,33 @@ export default function ChatWindow({ closeChat, settings, sessionId }) {
     </div>
   );
 }
+
+export function ChatWindowFull({ settings, sessionId }) {
+  const { chatHistory, setChatHistory, loading } = useChatHistory(
+    settings,
+    sessionId
+  );
+
+  if (loading) return null;
+  setEventDelegatorForCodeSnippets();
+  return (
+    <div className="flex flex-col">
+      <ChatFullWindowHeader
+        sessionId={sessionId}
+        settings={settings}
+        iconUrl={settings.brandImageUrl}
+        setChatHistory={setChatHistory}
+      />
+      {/* <ChatContainer
+        sessionId={sessionId}
+        settings={settings}
+        knownHistory={chatHistory}
+      />
+      <SessionId /> */}
+    </div>
+  );
+}
+
 
 // Enables us to safely markdown and sanitize all responses without risk of injection
 // but still be able to attach a handler to copy code snippets on all elements

@@ -3,7 +3,7 @@ import useSessionId from "@/hooks/useSessionId";
 import useOpenChat from "@/hooks/useOpen";
 import Head from "@/components/Head";
 import OpenButton from "@/components/OpenButton";
-import ChatWindow from "./components/ChatWindow";
+import ChatWindow, { ChatWindowFull } from "./components/ChatWindow";
 import { useEffect } from "react";
 
 export default function App() {
@@ -16,6 +16,22 @@ export default function App() {
   }, [embedSettings.loaded]);
 
   if (!embedSettings.loaded) return null;
+
+  if (embedSettings.iframe === 'enabled') {
+    return (
+      <>
+        <Head />
+        <div className={`w-screen h-screen bg-red-500`}>
+          <ChatWindowFull
+            settings={embedSettings}
+            sessionId={sessionId}
+          />
+        </div>
+      </>
+    )
+  }
+
+  // Renders the default bubble chat if nothing is defined
   return (
     <>
       <Head />
@@ -25,11 +41,10 @@ export default function App() {
             width: isChatOpen ? 320 : "auto",
             height: isChatOpen ? "93vh" : "auto",
           }}
-          className={`transition-all duration-300 ease-in-out ${
-            isChatOpen
-              ? "max-w-md p-4 bg-white rounded-lg border shadow-lg w-72"
-              : "w-16 h-16 rounded-full"
-          }`}
+          className={`transition-all duration-300 ease-in-out ${isChatOpen
+            ? "max-w-md p-4 bg-white rounded-lg border shadow-lg w-72"
+            : "w-16 h-16 rounded-full"
+            }`}
         >
           {isChatOpen && (
             <ChatWindow

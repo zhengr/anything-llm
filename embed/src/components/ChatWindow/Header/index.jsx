@@ -51,6 +51,46 @@ export default function ChatWindowHeader({
   );
 }
 
+export function ChatFullWindowHeader({
+  sessionId,
+  settings = {},
+  iconUrl = null,
+  setChatHistory,
+}) {
+  const [showingOptions, setShowOptions] = useState(false);
+
+  const handleChatReset = async () => {
+    await ChatService.resetEmbedChatSession(settings, sessionId);
+    setChatHistory([]);
+    setShowOptions(false);
+  };
+
+  return (
+    <div className="flex justify-between items-center relative">
+      <img
+        style={{ maxWidth: 100, maxHeight: 20 }}
+        src={iconUrl ?? AnythingLLMLogo}
+        alt={iconUrl ? "Brand" : "AnythingLLM Logo"}
+      />
+      <div className="flex gap-x-1 items-center">
+        {settings.loaded && (
+          <button
+            type="button"
+            onClick={() => setShowOptions(!showingOptions)}
+            className="hover:bg-gray-100 rounded-sm text-slate-800"
+          >
+            <DotsThreeOutlineVertical
+              size={18}
+              weight={!showingOptions ? "regular" : "fill"}
+            />
+          </button>
+        )}
+      </div>
+      <OptionsMenu showing={showingOptions} resetChat={handleChatReset} />
+    </div>
+  );
+}
+
 function OptionsMenu({ showing, resetChat }) {
   if (!showing) return null;
   return (

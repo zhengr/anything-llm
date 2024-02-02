@@ -27,6 +27,19 @@ function setConnectionMeta(request, response, next) {
   next();
 }
 
+async function validEmbedConfigUUID(request, response, next) {
+  const { embedId } = request.params;
+
+  const embed = await EmbedConfig.getWithWorkspace({ uuid: embedId });
+  if (!embed) {
+    response.sendStatus(404).end();
+    return;
+  }
+
+  response.locals.embedConfig = embed;
+  next();
+}
+
 async function validEmbedConfigId(request, response, next) {
   const { embedId } = request.params;
 
@@ -147,5 +160,6 @@ module.exports = {
   setConnectionMeta,
   validEmbedConfig,
   validEmbedConfigId,
+  validEmbedConfigUUID,
   canRespond,
 };
