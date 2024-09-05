@@ -3,8 +3,8 @@ const path = require("path");
 const { MimeDetector } = require("./mime");
 const documentsFolder =
   process.env.NODE_ENV === "production"
-    ? path.resolve("/storage/documents") // hardcoded to Render storage mount.
-    : path.resolve(__dirname, "../../../server/storage/documents");
+    ? path.resolve("/app/server/storage/documents") // hardcoded to Render storage mount.
+    : path.resolve(__dirname, "../../../app/server/storage/documents");
 
 function isTextType(filepath) {
   try {
