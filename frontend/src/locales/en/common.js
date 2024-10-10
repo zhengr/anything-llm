@@ -68,24 +68,24 @@ const TRANSLATIONS = {
 
   welcomeMessage: {
     part1:
-      "Welcome to AnythingLLM, AnythingLLM is an open-source AI tool by Mintplex Labs that turns anything into a trained chatbot you can query and chat with. AnythingLLM is a BYOK (bring-your-own-keys) software so there is no subscription, fee, or charges for this software outside of the services you want to use with it.",
+      "Welcome to MixTAO LLM, an AI tool developed by MixTAO Labs that transforms anything into a trained AI that you can query and chat with. \n\nWe abandon the traditional official website form, but use AI-driven conversational communication, and hope that this understanding process can-live-up!",
     part2:
-      "AnythingLLM is the easiest way to put powerful AI products like OpenAi, GPT-4, LangChain, PineconeDB, ChromaDB, and other services together in a neat package with no fuss to increase your productivity by 100x.",
+      "We focus on practical implementation of AI-related fields to help more and more individuals, businesses and organizations in need.",
     part3:
-      "AnythingLLM can run totally locally on your machine with little overhead you wont even notice it's there! No GPU needed. Cloud and on-premises installation is available as well.\nThe AI tooling ecosystem gets more powerful everyday. AnythingLLM makes it easy to use.",
+      "AI is bound to have an important disruptive impact on various industries and fields, but AI human-machine integration is a long way off and requires continuous trial and error adoption to gain an early advantage. That is, in the popular sense: early introduction, early benefit!",
     githubIssue: "Create an issue on Github",
-    user1: "How do I get started?!",
+    user1: "What does MixTAO Labs do?",
     part4:
-      "It's simple. All collections are organized into buckets we call \"Workspaces\". Workspaces are buckets of files, documents, images, PDFs, and other files which will be transformed into something LLM's can understand and use in conversation.\n\nYou can add and remove files at anytime.",
+      "Mixtao Labs is a research and development organization focused on artificial intelligence and machine learning, dedicated to providing innovative technology solutions and services. The laboratory has rich R & D experience and achievements in natural language processing, computer vision, data mining, etc., providing intelligent solutions for many industries.",
     createWorkspace: "Create your first workspace",
     user2:
-      "Is this like an AI dropbox or something? What about chatting? It is a chatbot isn't it?",
+      "Please tell us more about MixTAO Labs 'innovations in AI!",
     part5:
-      "AnythingLLM is more than a smarter Dropbox.\n\nAnythingLLM offers two ways of talking with your data:\n\n<i>Query:</i> Your chats will return data or inferences found with the documents in your workspace it has access to. Adding more documents to the Workspace make it smarter! \n\n<i>Conversational:</i> Your documents + your on-going chat history both contribute to the LLM knowledge at the same time. Great for appending real-time text-based info or corrections and misunderstandings the LLM might have. \n\nYou can toggle between either mode \n<i>in the middle of chatting!</i>",
+      "MixTAO Labs focuses on integrating powerful AI products such as llama, mistral, gemma, phi, qwen, OpenAi, GPT-4, LangChain, CrewAI, PineconeDB, and ChromaDB to build "smart brains" for businesses and organizations in a streamlined and mature architecture package. The reasoning power of these advanced models can significantly improve specific productivity and achieve sustained performance growth. \n\nWelcome to our models and demos at Huggingface, https://huggingface.co/mixtao.",
     user3: "Wow, this sounds amazing, let me try it out already!",
     part6: "Have Fun!",
     starOnGithub: "Star on GitHub",
-    contact: "Contact Mintplex Labs",
+    contact: "Contact MixTAO Labs",
   },
 
   "new-workspace": {
