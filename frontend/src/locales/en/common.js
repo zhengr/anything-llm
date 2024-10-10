@@ -79,9 +79,9 @@ const TRANSLATIONS = {
       "Mixtao Labs is a research and development organization focused on artificial intelligence and machine learning, dedicated to providing innovative technology solutions and services. The laboratory has rich R & D experience and achievements in natural language processing, computer vision, data mining, etc., providing intelligent solutions for many industries.",
     createWorkspace: "Create your first workspace",
     user2:
-      "Please tell us more about MixTAO Labs 'innovations in AI!",
+      "Please tell us more about MixTAO Labs -innovations in AI-!",
     part5:
-      "MixTAO Labs focuses on integrating powerful AI products such as llama, mistral, gemma, phi, qwen, OpenAi, GPT-4, LangChain, CrewAI, PineconeDB, and ChromaDB to build "smart brains" for businesses and organizations in a streamlined and mature architecture package. The reasoning power of these advanced models can significantly improve specific productivity and achieve sustained performance growth. \n\nWelcome to our models and demos at Huggingface, https://huggingface.co/mixtao.",
+      "MixTAO Labs focuses on integrating powerful AI products such as llama, mistral, gemma, phi, qwen, OpenAi, GPT-4, LangChain, CrewAI, PineconeDB, and ChromaDB to build -smart brains- for businesses and organizations in a streamlined and mature architecture package. The reasoning power of these advanced models can significantly improve specific productivity and achieve sustained performance growth. \n\nWelcome to our models and demos at Huggingface, https://huggingface.co/mixtao.",
     user3: "Wow, this sounds amazing, let me try it out already!",
     part6: "Have Fun!",
     starOnGithub: "Star on GitHub",
