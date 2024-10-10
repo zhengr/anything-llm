@@ -68,7 +68,7 @@ const TRANSLATIONS = {
 
   welcomeMessage: {
     part1:
-      "欢迎使用 MixTAO LLM，这是由 MixTAO Labs 开发的 AI 工具，可以将任何东西转换为您可以查询和聊天的训练有素的AI。",
+      "欢迎使用 MixTAO LLM，这是由 MixTAO Labs 开发的 AI 工具，可以将任何东西转换为您可以查询和聊天的训练有素的AI。\n\n我们摒弃传统的官方网站形式，而是采用AI驱动的对话式沟通，并希望这个了解过程能-活-起来！’",
     part2:
       "我们专注于AI相关领域的实践化落地，以帮助越来越多有需要的个人、企业和组织",
     part3:
