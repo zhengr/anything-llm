@@ -70,9 +70,9 @@ const TRANSLATIONS = {
     part1:
       "欢迎使用 MixTAO LLM，这是由 MixTAO Labs 开发的 AI 工具，可以将任何东西转换为您可以查询和聊天的训练有素的AI。",
     part2:
-      "",
+      "我们专注于AI相关领域的实践化落地，以帮助越来越多有需要的个人、企业和组织",
     part3:
-      "",
+      "AI势必对各个行业和领域将产生重要的颠覆性影响，但AI的人机融合是一个漫长之路，需要持续不断的试错性采纳以获得早发优势。也就是通俗意义上的：早引入，早受益！",
     githubIssue: "在 Github 上创建问题",
     user1: "MixTAO Labs是干什么的?",
     part4:
